@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>幻想の小窝</title>
+  <icon>https://mitpoppy.github.io/icon.png</icon>
+  <subtitle>怀揣着梦想的萌新</subtitle>
+  <link href="https://mitpoppy.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://mitpoppy.github.io/"/>
+  <updated>2024-03-12T07:30:15.294Z</updated>
+  <id>https://mitpoppy.github.io/</id>
+  
+  <author>
+    <name>Mitpoppy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在butterfly主题中添加rss订阅</title>
+    <link href="https://mitpoppy.github.io/posts/fe13d434.html"/>
+    <id>https://mitpoppy.github.io/posts/fe13d434.html</id>
+    <published>2023-01-13T15:49:22.000Z</published>
+    <updated>2024-03-12T07:30:15.294Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h1><p>由于我用的是<strong>butterfly</strong>主题，而在我写文章之前，主题文档内并没有和RSS订阅有关的教程，不过我在寻找各大搜索引擎时发现了这么一个插件，用的人也挺多。我也是打算写一篇文章记录一下我在hexo第一次折腾的事迹哈哈</p><h1 id="二、安装rss插件并在主题中设置"><a href="#二、安装rss插件并在主题中设置" class="headerlink" title="二、安装rss插件并在主题中设置"></a>二、安装rss插件并在主题中设置</h1><p>在butterfly的插件推荐中有说明了hexo的rss插件，叫<strong>hexo-generator-feed</strong></p><ol><li>首先添加插件，这里使用的是npm添加<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></li><li>然后在根目录中的_config.yml中添加如下配置<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">  enable: true</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br></pre></td></tr></table></figure></li></ol><p><strong>官网还说明了一些其他的参数，如：</strong></p><ul><li>enable: 默认开启可以省略</li><li>type: RSS的类型(atom&#x2F;rss2)</li><li>path: 文件路径，默认是 atom.xml&#x2F;rss2.xml</li><li>limit: 展示文章的数量,使用 0 或则 false 代表展示全部</li><li>hub: 如果使用不到可以为空</li><li>content: （可选）设置 true 可以在 RSS 文件中包含文章全部内容，默认：false</li><li>content_limit: （可选）摘要中使用的帖子内容的默认长度。 仅在内容设置为false且未显示自定义帖子描述时才使用。</li><li>content_limit_delim :（可选）如果content_limit用于缩短帖子内容，则仅在达到字符限制之前在此分隔符的最后一次出现处剪切。默认不使用。</li><li>icon: (可选）自定义图标。默认为主配置中指定的电子邮件头像。</li><li>autodiscovery: 添加提要自动发现，默认开启</li><li>template : 自定义模板路径。该文件用于生成 xml 文件</li></ul><ol start="3"><li><p>然后去主题的_config.yml中添加配置</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">rss:</span> <span class="string">/atom.xml</span></span><br></pre></td></tr></table></figure><p>这样你在用hexo g生成静态网页的时候会在public文件夹中（也就是你静态网页文件夹中）生成一个atom.xml文件</p></li><li><p>（可选）如果你想让别人知道你的RSS链接，可以在主题中的social settings中添加如下配置（就是在那侧边栏个人资料下面添加一个图标并链接到你的RSS文件）</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">fas fa-rss:</span> <span class="string">/atom.xml</span></span><br></pre></td></tr></table></figure><p>因为butterfly主题中有自带的fas图标，所以直接可以使用</p></li></ol>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、引言&quot;&gt;&lt;a href=&quot;#一、引言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
